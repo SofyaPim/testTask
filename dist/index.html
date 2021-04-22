@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <title>FTL</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <h1 class="main-header">FTL: Прямая машина</h1>
+            <section class="route inputs">
+                <div class="inputs-header">
+                    <div class="circle">1</div>
+                    <h3>Маршрут</h3>
+                </div>
+                <label class="route-label label" for="wherefrom">Откуда
+                    <input class="route-input input" type="text" name="wherefrom" id="wherefrom">
+                </label>
+                <label class="route-label label" for="where">Kуда
+                    <input class="route-input input" type="text" name="where" id="where">
+                </label>
+            </section>
+            <section class="transport-input inputs">
+                <div class="inputs-header">
+                    <div class="circle">2</div>
+                    <h3>Транспорт</h3>
+                </div>
+                <div class="select-wrapper">
+                    <label class="carrying select label" for="carrying">Грузоподъемность
+                        <select class="input" name="carrying" id="carrying">
+                            <option value="Вариант 1">Вариант 1</option>
+                            <option value="Вариант 2">Вариант 2</option>
+                            <option value="Вариант 3">Вариант 3</option>
+                            <option value="Вариант 4">Вариант 4</option>
+                            <option value="Вариант 5">Вариант 5</option>
+                            <option value="Вариант 6">Вариант 6</option>
+                        </select>
+                    </label>
+                    <label class="loading-method select label" for="loading-method">Способ погрузки
+                        <select class="input" name="loading-method" id="loading-method">
+                            <option value="Вариант 1">Вариант 1</option>
+                            <option value="Вариант 2">Вариант 2</option>
+                            <option value="Вариант 3">Вариант 3</option>
+                            <option value="Вариант 4">Вариант 4</option>
+                            <option value="Вариант 5">Вариант 5</option>
+                            <option value="Вариант 6">Вариант 6</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+            <section class="cargo inputs">
+                <div class="inputs-header">
+                    <div class="circle">3</div>
+                    <h3>Груз</h3>
+                </div>
+                <label class="cargo-select select label" for="cargo-type">Тип груза
+                    <select class="input" name="cargo-type" id="cargo-type">
+                        <option value="Вариант 1">Вариант 1</option>
+                        <option value="Вариант 2">Вариант 2</option>
+                        <option value="Вариант 3">Вариант 3</option>
+                        <option value="Вариант 4">Вариант 4</option>
+                        <option value="Вариант 5">Вариант 5</option>
+                        <option value="Вариант 6">Вариант 6</option>
+                    </select>
+                </label>
+                <div class="select-wrapper">
+                    <label class="danger-class select label" for="danger-class">Класс опасности
+                        <select class="input" name="danger-class" id="danger-class">
+                            <option value="Вариант 1">Вариант 1</option>
+                            <option value="Вариант 2">Вариант 2</option>
+                            <option value="Вариант 3">Вариант 3</option>
+                            <option value="Вариант 4">Вариант 4</option>
+                            <option value="Вариант 5">Вариант 5</option>
+                            <option value="Вариант 6">Вариант 6</option>
+                        </select>
+                    </label>
+                    <label class="declared-value select label" for="declared-value">Класс опасности
+                        <select class="input" name="declared-value" id="declared-value">
+                            <option value="Вариант 1">Вариант 1</option>
+                            <option value="Вариант 2">Вариант 2</option>
+                            <option value="Вариант 3">Вариант 3</option>
+                            <option value="Вариант 4">Вариант 4</option>
+                            <option value="Вариант 5">Вариант 5</option>
+                            <option value="Вариант 6">Вариант 6</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox-input hidden" type="checkbox" name="checkbox" id="checkbox">
+                    <label class="checkbox-label label" for="checkbox">Требуется температурный режим</label>
+                </div>
+            </section>
+            <section class="time inputs">
+                <div class="inputs-header">
+                    <div class="circle">4</div>
+                    <h3>Время</h3>
+                </div>
+                <div class="radio-wrapper">
+                    <p class="radio-mark label">Когда прибыть на точку <span> 700 км в день</span></p>
+                    <div class="radio-item">
+                        <input class="radio-input hidden" type="radio" name="adres" id="adres_1">
+                        <label class="radio-label" for="adres_1">Адрес не указан <span>не выбрано</span> </label>
+                    </div>
+                    <div class="radio-item">
+                        <input class="radio-input hidden" type="radio" name="adres" id="adres_2">
+                        <label class="radio-label" for="adres_2">Адрес не указан <span>не выбрано</span> </label>
+                    </div>
+                </div>
+                <label class="comment label" for="comment">Комментарий к заказу</label>
+                <textarea name="comment" id="comment" rows="6"
+                    placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+            </section>
+        </main>
+        <aside class="aside-hint">
+            <p>
+                Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+            </p>
+        </aside>
+    </div>
+</body>
+</html>
