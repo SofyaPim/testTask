@@ -150,7 +150,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 99%;
+  width: inherit;
   background-color: white;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -268,6 +268,10 @@ body {
 }
 
 .main .cargo .cargo-select {
+  width: 50%;
+}
+
+.main .cargo .cargo-select .cargo-select-block .__select-content {
   width: 50%;
 }
 
