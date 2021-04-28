@@ -937,7 +937,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
   Object(_modules_select__WEBPACK_IMPORTED_MODULE_0__["default"])('.carrying-block', '.carrying-title', '.carrying-label');
   Object(_modules_select__WEBPACK_IMPORTED_MODULE_0__["default"])('.loading-method-block', '.loading-method-title', '.loading-method-label');
-  Object(_modules_select__WEBPACK_IMPORTED_MODULE_0__["default"])('.cargo-select-block', '.cargo-select-title', 'cargo-select-label');
+  Object(_modules_select__WEBPACK_IMPORTED_MODULE_0__["default"])('.cargo-select-block', '.cargo-select-title', '.cargo-select-label');
+  Object(_modules_select__WEBPACK_IMPORTED_MODULE_0__["default"])('.declared-value-block', '.declared-value-title', '.declared-value-label');
+  Object(_modules_select__WEBPACK_IMPORTED_MODULE_0__["default"])('.danger-class-block', '.danger-class-title', '.danger-class-label');
 });
 
 /***/ }),
