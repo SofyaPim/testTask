@@ -138,7 +138,8 @@ body {
         cursor: pointer;
         position: relative;
         color: $bgLight;
-width: 99%;
+        width: 99%;
+
         &::before,
         &::after {
             content: "";
