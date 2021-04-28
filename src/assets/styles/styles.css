@@ -45,6 +45,7 @@ body {
 .main .label {
   font-size: 13px;
   margin-bottom: 10px;
+  word-wrap: unset;
 }
 
 .main .circle {
@@ -88,6 +89,7 @@ body {
 }
 
 .main .__select[data-state="active"] .__select-content {
+  top: 60px;
   opacity: 1;
 }
 
@@ -141,7 +143,7 @@ body {
 
 .main .__select-content {
   position: absolute;
-  top: 58px;
+  top: 60px;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,11 +160,35 @@ body {
   z-index: 8;
 }
 
-.main .__select-input {
+.main .cargo .__select .__select-content {
+  width: 50%;
+}
+
+.main .cargo .__select[data-state="active"] .__select-content {
+  width: 50%;
+}
+
+.main .cargo .__select .danger-class .__select-content[data-state="active"] {
+  width: 99%;
+}
+
+.main .cargo .__select .danger-class .__select-content {
+  width: 99%;
+}
+
+.main .cargo .__select .declared-value .__select-content[data-state="active"] {
+  width: 99%;
+}
+
+.main .cargo .__select .declared-value .__select-content {
+  width: 99%;
+}
+
+.__select-input {
   display: none;
 }
 
-.main .__select-label {
+.__select-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,23 +205,23 @@ body {
   overflow: hidden;
 }
 
-.main .__select-label + input + .main .__select-label {
+.__select-label + input + .__select-label {
   border-top: 0 solid #717174;
 }
 
-.main .__select-label:hover {
+.__select-label:hover {
   background-color: #ef483e;
   color: white;
 }
 
-.main .main-header {
+.main-header {
   font-weight: 700;
   font-size: 56px;
   letter-spacing: 2px;
   font-family: 'Arimo', sans-serif;
 }
 
-.main .inputs {
+.inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,7 +233,7 @@ body {
       flex-wrap: wrap;
 }
 
-.main .inputs-header {
+.inputs-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,17 +253,17 @@ body {
   letter-spacing: 1px;
 }
 
-.main .route-label {
+.route-label {
   width: 100%;
 }
 
-.main .route-input {
+.route-input {
   margin-top: 10px;
   margin-bottom: 16px;
   width: 100%;
 }
 
-.main .select-wrapper {
+.select-wrapper {
   width: 50%;
   display: -ms-grid;
   display: grid;
@@ -247,15 +273,15 @@ body {
       grid-template-rows: 1fr;
 }
 
-.main .carrying {
+.carrying {
   width: 97%;
 }
 
-.main .loading-method {
+.loading-method {
   width: 97%;
 }
 
-.main .cargo {
+.cargo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,35 +293,31 @@ body {
       flex-wrap: wrap;
 }
 
-.main .cargo .cargo-select {
+.cargo .cargo-select {
   width: 50%;
 }
 
-.main .cargo .cargo-select .cargo-select-block .__select-content {
-  width: 50%;
-}
-
-.main .cargo .danger-class {
+.danger-class {
   width: 97%;
 }
 
-.main .cargo .declared-value {
+.declared-value {
   width: 97%;
 }
 
-.main .cargo .checkbox {
+.checkbox {
   position: relative;
   margin-bottom: 20px;
   width: 300px;
 }
 
-.main .cargo .checkbox .checkbox-label {
+.checkbox .checkbox-label {
   font-weight: 400;
   padding-left: 35px;
   cursor: pointer;
 }
 
-.main .cargo .checkbox .checkbox-label:before {
+.checkbox .checkbox-label:before {
   content: "";
   display: block;
   width: 23px;
@@ -308,7 +330,7 @@ body {
   z-index: 1;
 }
 
-.main .cargo .checkbox .checkbox-label:after {
+.checkbox .checkbox-label:after {
   content: "\2228";
   display: block;
   background-color: #ef483e;
@@ -327,15 +349,15 @@ body {
   transition: opacity .3s ease-in-out;
 }
 
-.main .cargo .checkbox .checkbox-input:checked + .checkbox-label:before {
+.checkbox .checkbox-input:checked + .checkbox-label:before {
   border: none;
 }
 
-.main .cargo .checkbox .checkbox-input:checked + .checkbox-label:after {
+.checkbox .checkbox-input:checked + .checkbox-label:after {
   opacity: 1;
 }
 
-.main .time {
+.time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,12 +368,12 @@ body {
   margin-bottom: 129px;
 }
 
-.main .time .radio-wrapper {
+.time .radio-wrapper {
   width: 100%;
   margin-bottom: 16px;
 }
 
-.main .time .radio-wrapper .radio-mark {
+.time .radio-wrapper .radio-mark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,14 +390,14 @@ body {
   margin-bottom: 5px;
 }
 
-.main .time .radio-wrapper .radio-item {
+.time .radio-wrapper .radio-item {
   position: relative;
   background-color: #4b4b4f;
   margin-bottom: 5px;
   padding: 12px;
 }
 
-.main .time .radio-wrapper .radio-item .radio-label {
+.time .radio-wrapper .radio-item .radio-label {
   margin-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,14 +416,14 @@ body {
   opacity: .7;
 }
 
-.main .time .radio-wrapper .radio-item .radio-label span {
+.time .radio-wrapper .radio-item .radio-label span {
   text-transform: uppercase;
   background-color: #717174;
   opacity: .5;
   padding: 5px;
 }
 
-.main .time .radio-wrapper .radio-item .radio-label:before {
+.time .radio-wrapper .radio-item .radio-label:before {
   content: "";
   display: block;
   width: 8px;
@@ -415,7 +437,7 @@ body {
   z-index: 1;
 }
 
-.main .time .radio-wrapper .radio-item .radio-label:after {
+.time .radio-wrapper .radio-item .radio-label:after {
   content: "";
   display: block;
   width: 8px;
@@ -430,20 +452,20 @@ body {
   opacity: 0;
 }
 
-.main .time .radio-wrapper .radio-item .radio-input:checked + .radio-label:after {
+.time .radio-wrapper .radio-item .radio-input:checked + .radio-label:after {
   opacity: 1;
 }
 
-.main .time .radio-wrapper .radio-item .radio-input:checked + .radio-label span {
+.time .radio-wrapper .radio-item .radio-input:checked + .radio-label span {
   opacity: 1;
 }
 
-.main .time .comment {
+.time .comment {
   margin-bottom: 10px;
   font-size: 13px;
 }
 
-.main .time .comment #textarea {
+.time .comment #textarea {
   width: 100%;
   background-color: white;
   font-size: 16px;
@@ -469,7 +491,7 @@ body {
   font-weight: 200;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1023px) {
   .wrapper {
     -ms-grid-columns: 60% 1fr;
         grid-template-columns: 60% 1fr;
