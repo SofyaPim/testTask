@@ -31,26 +31,58 @@
                     <h3>Транспорт</h3>
                 </div>
                 <div class="select-wrapper">
-                    <label class="carrying select label" for="carrying">Грузоподъемность
-                        <select class="input" name="carrying" id="carrying">
-                            <option value="Вариант 1">Вариант 1</option>
-                            <option value="Вариант 2">Вариант 2</option>
-                            <option value="Вариант 3">Вариант 3</option>
-                            <option value="Вариант 4">Вариант 4</option>
-                            <option value="Вариант 5">Вариант 5</option>
-                            <option value="Вариант 6">Вариант 6</option>
-                        </select>
-                    </label>
-                    <label class="loading-method select label" for="loading-method">Способ погрузки
-                        <select class="input" name="loading-method" id="loading-method">
-                            <option value="Вариант 1">Вариант 1</option>
-                            <option value="Вариант 2">Вариант 2</option>
-                            <option value="Вариант 3">Вариант 3</option>
-                            <option value="Вариант 4">Вариант 4</option>
-                            <option value="Вариант 5">Вариант 5</option>
-                            <option value="Вариант 6">Вариант 6</option>
-                        </select>
-                    </label>
+                    <div class="__select carrying-block" data-state="">
+                        <div class="label carrying">Грузоподъемность</div>
+                        <div class=" __select-title carrying-title"  data-default="Не выбрана">Не выбрана</div>
+                        <div class=" __select-content">
+                            <input id="__select0" class="__select-input" value="Option 0" type="radio"
+                                name="singleSelect" checked />
+                            <label for="__select0" class="__select-label carrying-label">Не выбрана</label>
+                            <input id="__select1" class="__select-input" value="Option 1" type="radio"
+                                name="singleSelect" />
+                            <label for="__seSelect1" class="__select-label carrying-label">Вариант 1</label>
+                            <input id="__select2" class="__select-input" value="Option 2" type="radio"
+                                name="singleSelect" />
+                            <label for="__select2" class="__select-label carrying-label">Вариант 2 </label>
+                            <input id="__select3" class="__select-input" value="Option 3" type="radio"
+                                name="singleSelect" />
+                            <label for="__select3" class="__select-label carrying-label">Вариант 3</label>
+                            <input id="__select4" class="__select-input" value="Option 4" type="radio"
+                                name="singleSelect" />
+                            <label for="__select4" class="__select-label carrying-label">Вариант 4</label>
+                            <input id="__select5" class="__select-input" value="Option 5" type="radio"
+                                name="singleSelect" />
+                            <label for="__select5" class="__select-label carrying-label">Вариант 5</label>
+                        </div>
+
+                    </div>
+
+
+                    <div class="__select loading-method-block" data-state="">
+                        <div class="loading-method label">Способ погрузки</div>
+                        <div class="__select-title loading-method-title">Не выбран</div>
+                        <div class=" __select-content">
+                            <input id="__select0" class="__select-input" value="Option 0" type="radio"
+                                name="singleSelect" checked />
+                            <label for="__select0" class="__select-label loading-method-label">Не выбрана</label>
+                            <input id="__select1" class="__select-input" value="Option 1" type="radio"
+                                name="singleSelect" />
+                            <label for="__seSelect1" class="__select-label loading-method-label">Вариант 1</label>
+                            <input id="__select2" class="__select-input" value="Option 2" type="radio"
+                                name="singleSelect" />
+                            <label for="__select2" class="__select-label loading-method-label">Вариант 2 </label>
+                            <input id="__select3" class="__select-input" value="Option 3" type="radio"
+                                name="singleSelect" />
+                            <label for="__select3" class="__select-label loading-method-label">Вариант 3</label>
+                            <input id="__select4" class="__select-input" value="Option 4" type="radio"
+                                name="singleSelect" />
+                            <label for="__select4" class="__select-label loading-method-label">Вариант 4</label>
+                            <input id="__select5" class="__select-input" value="Option 5" type="radio"
+                                name="singleSelect" />
+                            <label for="__select5" class="__select-label loading-method-label">Вариант 5</label>
+                        </div>
+                    </div>
+
                 </div>
             </section>
             <section class="cargo inputs">
@@ -58,69 +90,121 @@
                     <div class="circle">3</div>
                     <h3>Груз</h3>
                 </div>
-                <label class="cargo-select select label" for="cargo-type">Тип груза
-                    <select class="input" name="cargo-type" id="cargo-type">
-                        <option value="Вариант 1">Вариант 1</option>
-                        <option value="Вариант 2">Вариант 2</option>
-                        <option value="Вариант 3">Вариант 3</option>
-                        <option value="Вариант 4">Вариант 4</option>
-                        <option value="Вариант 5">Вариант 5</option>
-                        <option value="Вариант 6">Вариант 6</option>
-                    </select>
-                </label>
-                <div class="select-wrapper">
-                    <label class="danger-class select label" for="danger-class">Класс опасности
-                        <select class="input" name="danger-class" id="danger-class">
-                            <option value="Вариант 1">Вариант 1</option>
-                            <option value="Вариант 2">Вариант 2</option>
-                            <option value="Вариант 3">Вариант 3</option>
-                            <option value="Вариант 4">Вариант 4</option>
-                            <option value="Вариант 5">Вариант 5</option>
-                            <option value="Вариант 6">Вариант 6</option>
-                        </select>
-                    </label>
-                    <label class="declared-value select label" for="declared-value">Класс опасности
-                        <select class="input" name="declared-value" id="declared-value">
-                            <option value="Вариант 1">Вариант 1</option>
-                            <option value="Вариант 2">Вариант 2</option>
-                            <option value="Вариант 3">Вариант 3</option>
-                            <option value="Вариант 4">Вариант 4</option>
-                            <option value="Вариант 5">Вариант 5</option>
-                            <option value="Вариант 6">Вариант 6</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox-input hidden" type="checkbox" name="checkbox" id="checkbox">
-                    <label class="checkbox-label label" for="checkbox">Требуется температурный режим</label>
-                </div>
-            </section>
-            <section class="time inputs">
-                <div class="inputs-header">
-                    <div class="circle">4</div>
-                    <h3>Время</h3>
-                </div>
-                <div class="radio-wrapper">
-                    <p class="radio-mark label">Когда прибыть на точку <span> 700 км в день</span></p>
-                    <div class="radio-item">
-                        <input class="radio-input hidden" type="radio" name="adres" id="adres_1">
-                        <label class="radio-label" for="adres_1">Адрес не указан <span>не выбрано</span> </label>
-                    </div>
-                    <div class="radio-item">
-                        <input class="radio-input hidden" type="radio" name="adres" id="adres_2">
-                        <label class="radio-label" for="adres_2">Адрес не указан <span>не выбрано</span> </label>
+                <div class="__select cargo-select-block " data-state="">
+                    <div class="loading-method label">Тип груза</div>
+                    <div class="__select-title cargo-select-title input cargo-select">Не выбран</div>
+
+                    <div class=" __select-content">
+                        <input id="__select0" class="__select-input" value="Option 0" type="radio" name="singleSelect"
+                            checked />
+                        <label for="__select0" class="__select-label cargo-select-label">Не выбрана</label>
+                        <input id="__select1" class="__select-input" value="Option 1" type="radio"
+                            name="singleSelect" />
+                        <label for="__seSelect1" class="__select-label cargo-select-label">Вариант 1</label>
+                        <input id="__select2" class="__select-input" value="Option 2" type="radio"
+                            name="singleSelect" />
+                        <label for="__select2" class="__select-label cargo-select-label">Вариант 2 </label>
+                        <input id="__select3" class="__select-input" value="Option 3" type="radio"
+                            name="singleSelect" />
+                        <label for="__select3" class="__select-label cargo-select-label">Вариант 3</label>
+                        <input id="__select4" class="__select-input" value="Option 4" type="radio"
+                            name="singleSelect" />
+                        <label for="__select4" class="__select-label cargo-select-label">Вариант 4</label>
+                        <input id="__select5" class="__select-input" value="Option 5" type="radio"
+                            name="singleSelect" />
+                        <label for="__select5" class="__select-label cargo-select-label">Вариант 5</label>
                     </div>
                 </div>
-                <label class="comment label" for="comment">Комментарий к заказу</label>
-                <textarea name="comment" id="comment" rows="6"
-                    placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
-            </section>
-        </main>
-        <aside class="aside-hint">
-            <p>
-                Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
-            </p>
-        </aside>
+    
+    <div class="select-wrapper">
+        
+            <div class="__select danger-class-block" data-state="">
+                <div class="danger-class label" >Класс опасности</div>
+              
+                <div class=" __select-title danger-class-title input"  data-default="Не выбрана">Не выбрана</div>
+                <div class=" __select-content">
+                    <input id="__select0" class="__select-input" value="Option 0" type="radio"
+                        name="singleSelect" checked />
+                    <label for="__select0" class="__select-label danger-class-label">Не выбрана</label>
+                    <input id="__select1" class="__select-input" value="Option 1" type="radio"
+                        name="singleSelect" />
+                    <label for="__seSelect1" class="__select-label danger-class-label">Вариант 1</label>
+                    <input id="__select2" class="__select-input" value="Option 2" type="radio"
+                        name="singleSelect" />
+                    <label for="__select2" class="__select-label danger-class-label">Вариант 2 </label>
+                    <input id="__select3" class="__select-input" value="Option 3" type="radio"
+                        name="singleSelect" />
+                    <label for="__select3" class="__select-label danger-class-label">Вариант 3</label>
+                    <input id="__select4" class="__select-input" value="Option 4" type="radio"
+                        name="singleSelect" />
+                    <label for="__select4" class="__select-label danger-class-label">Вариант 4</label>
+                    <input id="__select5" class="__select-input" value="Option 5" type="radio"
+                        name="singleSelect" />
+                    <label for="__select5" class="__select-label danger-class-label">Вариант 5</label>
+                </div>
+        </div>
+
+        <div class="__select declared-value-block" data-state="">
+            <div class="declared-value  label" >Объявленная ценность, &#8381;</div>
+          
+            <div class=" __select-title declared-value-title input"  data-default="Не выбрана">Не выбрана</div>
+       
+        <div class=" __select-content">
+            <input id="__select0" class="__select-input" value="Option 0" type="radio"
+                name="singleSelect" checked />
+            <label for="__select0" class="__select-label declared-value-label">Не выбрана</label>
+            <input id="__select1" class="__select-input" value="Option 1" type="radio"
+                name="singleSelect" />
+            <label for="__seSelect1" class="__select-label declared-value-label">Вариант 1</label>
+            <input id="__select2" class="__select-input" value="Option 2" type="radio"
+                name="singleSelect" />
+            <label for="__select2" class="__select-label declared-value-label">Вариант 2 </label>
+            <input id="__select3" class="__select-input" value="Option 3" type="radio"
+                name="singleSelect" />
+            <label for="__select3" class="__select-label declared-value-label">Вариант 3</label>
+            <input id="__select4" class="__select-input" value="Option 4" type="radio"
+                name="singleSelect" />
+            <label for="__select4" class="__select-label declared-value-label">Вариант 4</label>
+            <input id="__select5" class="__select-input" value="Option 5" type="radio"
+                name="singleSelect" />
+            <label for="__select5" class="__select-label declared-value-label">Вариант 5</label>
+        </div>
+        
     </div>
+    <div class="checkbox">
+        <input class="checkbox-input hidden" type="checkbox" name="checkbox" id="checkbox">
+        <label class="checkbox-label label" for="checkbox">Требуется температурный режим</label>
+    </div>
+    </section>
+    <section class="time inputs">
+        <div class="inputs-header">
+            <div class="circle">4</div>
+            <h3>Время</h3>
+        </div>
+        <div class="radio-wrapper">
+            <p class="radio-mark label">Когда прибыть на точку <span> 700 км в день</span></p>
+            <div class="radio-item">
+                <input class="radio-input hidden" type="radio" name="adres" id="adres_1">
+                <label class="radio-label" for="adres_1">Адрес не указан <span>не выбрано</span> </label>
+            </div>
+            <div class="radio-item">
+                <input class="radio-input hidden" type="radio" name="adres" id="adres_2">
+                <label class="radio-label" for="adres_2">Адрес не указан <span>не выбрано</span> </label>
+            </div>
+        </div>
+        <label class="comment label" for="comment">Комментарий к заказу</label>
+        <textarea name="comment" id="comment" rows="6"
+            placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+    </section>
+   
+    </main>
+    <aside class="aside-hint">
+        <p>
+            Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+        </p>
+    </aside>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

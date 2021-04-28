@@ -44,6 +44,7 @@ body {
 
 .main .label {
   font-size: 13px;
+  margin-bottom: 10px;
 }
 
 .main .circle {
@@ -66,10 +67,82 @@ body {
 .main .input {
   height: 44px;
   background-color: white;
+  margin-bottom: 20px;
   color: #343539;
 }
 
-.main .select {
+.main .__select {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main .__select[data-state="active"] .__select-title::before {
+  -webkit-transform: translate(-3px, -50%) rotate(-45deg);
+          transform: translate(-3px, -50%) rotate(-45deg);
+}
+
+.main .__select[data-state="active"] .__select-title::after {
+  -webkit-transform: translate(3px, -50%) rotate(45deg);
+          transform: translate(3px, -50%) rotate(45deg);
+}
+
+.main .__select[data-state="active"] .__select-content {
+  opacity: 1;
+}
+
+.main .__select[data-state="active"] .__select-label + .__select-input + .__select-label {
+  max-height: 44px;
+}
+
+.main .__select-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 16px;
+  border: solid 1px #717174;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  color: #4b4b4f;
+  width: 99%;
+}
+
+.main .__select-title::before, .main .__select-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: block;
+  width: 10px;
+  height: 2px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: #4b4b4f;
+  -webkit-transform: translate(-3px, -50%) rotate(45deg);
+          transform: translate(-3px, -50%) rotate(45deg);
+}
+
+.main .__select-title::after {
+  -webkit-transform: translate(3px, -50%) rotate(-45deg);
+          transform: translate(3px, -50%) rotate(-45deg);
+}
+
+.main .__select-title:hover {
+  border-color: #ef483e;
+}
+
+.main .__select-title:hover::before, .main .__select-title:hover::after {
+  background-color: #ef483e;
+}
+
+.main .__select-content {
+  position: absolute;
+  top: 58px;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,22 +150,42 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  border-radius: 0;
-}
-
-.main .select select {
+  width: 99%;
   background-color: white;
-  color: #343539;
-  border-radius: 0;
-  margin-top: 10px;
-  padding-left: 20px;
-  font-size: 16px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  z-index: 8;
 }
 
-.main .select select option:checked {
-  background-color: #ef483e !important;
+.main .__select-input {
+  display: none;
+}
+
+.main .__select-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 44px;
+  max-height: 0;
+  padding: 0 16px;
+  color: #717174;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.main .__select-label + input + .main .__select-label {
+  border-top: 0 solid #717174;
+}
+
+.main .__select-label:hover {
+  background-color: #ef483e;
+  color: white;
 }
 
 .main .main-header {
@@ -145,7 +238,7 @@ body {
 }
 
 .main .select-wrapper {
-  width: 100%;
+  width: 50%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -175,7 +268,7 @@ body {
 }
 
 .main .cargo .cargo-select {
-  width: 100%;
+  width: 50%;
 }
 
 .main .cargo .danger-class {
@@ -189,6 +282,7 @@ body {
 .main .cargo .checkbox {
   position: relative;
   margin-bottom: 20px;
+  width: 300px;
 }
 
 .main .cargo .checkbox .checkbox-label {

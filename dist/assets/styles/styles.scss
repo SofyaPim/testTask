@@ -54,6 +54,7 @@ body {
 
     .label {
         font-size: 13px;
+        margin-bottom: 10px;
     }
 
     .circle {
@@ -74,32 +75,144 @@ body {
     .input {
         height: 44px;
         background-color: $color;
+        margin-bottom: 20px;
         color: $bg;
 
     }
 
-    .select {
-        @include df-dfc();
-        margin-right: 10px;
-        margin-bottom: 20px;
-        border-radius: 0;
+    // .select {
+    //     @include df-dfc();
+    //     margin-right: 10px;
+    //     margin-bottom: 20px;
+    //     border-radius: 0;
 
-        select {
-            background-color: $color;
-            color: $bg;
-            border-radius: 0;
-            margin-top: 10px;
-            padding-left: 20px;
-            font-size: 16px;
+    //     select {
+    //         background-color: $color;
+    //         color: $bg;
+    //         border-radius: 0;
+    //         margin-top: 10px;
+    //         padding-left: 20px;
+    //         font-size: 16px;
 
-            option:checked {
-                background-color: $red !important;
+    //         option:checked {
+    //             background-color: $red !important;
+    //         }
+
+    //     }
+
+    // }
+    //select test
+    .__select {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+
+        &[data-state="active"] {
+            .__select-title {
+                &::before {
+                    transform: translate(-3px, -50%) rotate(-45deg);
+                }
+
+                &::after {
+                    transform: translate(3px, -50%) rotate(45deg);
+                }
             }
 
+            .__select-content {
+                opacity: 1;
+            }
+
+            .__select-label+.__select-input+.__select-label {
+                max-height: 44px;
+
+            }
         }
+    }
+
+    .__select-title {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        border: solid 1px $grey;
+        background-color: $color;
+        cursor: pointer;
+        position: relative;
+        color: $bgLight;
+width: 99%;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            display: block;
+            width: 10px;
+            height: 2px;
+            transition: all 0.3s ease-out;
+            background-color: $bgLight;
+            transform: translate(-3px, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(3px, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+            border-color: $red;
+
+            &::before,
+            &::after {
+                background-color: $red;
+            }
+        }
+    }
+
+    .__select-content {
+        position: absolute;
+        top: 58px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 99%;
+        background-color: $color;
+        transition: all 0.3s ease-out;
+        opacity: 0;
+        z-index: 8;
+    }
+
+    .__select-input {
+        display: none;
+
 
     }
 
+    .__select-label {
+        display: flex;
+        align-items: center;
+
+        height: 44px;
+        max-height: 0;
+        padding: 0 16px;
+        color: $grey;
+        transition: all 0.2s ease-out;
+        cursor: pointer;
+        overflow: hidden;
+
+        &+input+& {
+            border-top: 0 solid $grey;
+        }
+
+        &:hover {
+            background-color: $red;
+
+            color: $color;
+        }
+    }
+
+
+
+
+    //end test
     .main-header {
         font-weight: 700;
         font-size: 56px;
@@ -135,7 +248,7 @@ body {
     }
 
     .select-wrapper {
-        width: 100%;
+        width: 50%;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 1fr;
@@ -157,7 +270,7 @@ body {
 
 
         .cargo-select {
-            width: 100%;
+            width: 50%;
 
 
         }
@@ -173,7 +286,7 @@ body {
         .checkbox {
             position: relative;
             margin-bottom: 20px;
-
+            width: 300px;
 
             .checkbox-label {
 
