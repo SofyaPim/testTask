@@ -492,6 +492,15 @@ body {
 }
 
 @media all and (max-width: 1023px) {
+  .main .label {
+    font-size: 11px;
+  }
+  .declared-value .label {
+    font-size: 10px;
+  }
+  .select-wrapper {
+    width: 100%;
+  }
   .wrapper {
     -ms-grid-columns: 60% 1fr;
         grid-template-columns: 60% 1fr;
